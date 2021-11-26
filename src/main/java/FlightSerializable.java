@@ -37,5 +37,9 @@ public class FlightSerializable implements Serializable {
         return originAirportId;
     }
 
+    public int getDestAirportId() {
+        return destAirportId;
+    }
+
     
 }
