@@ -35,4 +35,8 @@ public class FlightCounter implements Serializable {
     public float getMaxDelay() {
         return maxDelay;
     }
+
+    public int getDelayFlights() {
+        return delayFlights;
+    }
 }
