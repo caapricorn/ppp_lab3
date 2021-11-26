@@ -24,4 +24,8 @@ public class FlightSerializable implements Serializable {
     public void setDestAirportId(int destAirportId) {
         this.destAirportId = destAirportId;
     }
+
+    public void setDelayTime(float delayTime) {
+        this.delayTime = delayTime;
+    }
 }
