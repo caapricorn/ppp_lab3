@@ -43,4 +43,8 @@ public class FlightCounter implements Serializable {
     public int getCancelledFlights() {
         return  cancelledFlights;
     }
+
+    public int getFlightCount() {
+        return flightCount;
+    }
 }
