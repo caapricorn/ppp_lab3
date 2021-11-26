@@ -45,5 +45,7 @@ public class FlightSerializable implements Serializable {
         return  delayTime;
     }
 
-    
+    public int getIsCancelled() {
+        return isCancelled;
+    }
 }
