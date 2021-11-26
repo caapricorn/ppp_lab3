@@ -28,4 +28,6 @@ public class FlightSerializable implements Serializable {
     public void setDelayTime(float delayTime) {
         this.delayTime = delayTime;
     }
+
+    
 }
