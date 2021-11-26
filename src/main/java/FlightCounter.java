@@ -57,5 +57,12 @@ public class FlightCounter implements Serializable {
         );
     }
 
-    
+    public static FlightCounter addValue() {
+        return new FlightCounter();
+    }
+
+    public static String output(FlightCounter a) {
+        String outputString;
+        return outputString;
+    }
 }
