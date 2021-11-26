@@ -53,7 +53,9 @@ public class FlightCounter implements Serializable {
                 a.getMaxDelay() + b.getMaxDelay(),
                 a.getDelayFlights() + b.getDelayFlights(),
                 a.getCancelledFlights() + b.getCancelledFlights(),
-                a.getFlightCount() 
-        )
+                a.getFlightCount() + b.getFlightCount()
+        );
     }
+
+    
 }
