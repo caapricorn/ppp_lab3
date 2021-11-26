@@ -24,5 +24,7 @@ public class FlightCounter implements Serializable {
         this.delayFlights = delayFlights;
     }
 
-    
+    public void setCancelledFlights(int cancelledFlights) {
+        this.cancelledFlights = cancelledFlights;
+    }
 }
