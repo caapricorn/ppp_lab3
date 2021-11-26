@@ -1,2 +1,8 @@
-public class FlightSerializable {
+import java.io.Serializable;
+
+public class FlightSerializable implements Serializable {
+
+    private int originAirportId;
+    private int destAirportId;
+    private float
 }
