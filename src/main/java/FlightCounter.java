@@ -6,6 +6,6 @@ public class FlightCounter implements Serializable {
     public FlightCounter() {
     }
 
-    public FlightCounter() {
+    public FlightCounter(float maxDelay) {
     }
 }
