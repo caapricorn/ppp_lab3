@@ -20,4 +20,8 @@ public class FlightSerializable implements Serializable {
     public void setOriginAirportId(int originAirportId) {
         this.originAirportId = originAirportId;
     }
+
+    public void setDestAirportId(int destAirportId) {
+        this.destAirportId = destAirportId;
+    }
 }
