@@ -10,8 +10,7 @@ public class CSVParser {
 
     public static JavaRDD<String> parseFlight(JavaRDD<String> distFile) {
         distFile = distFile
-                .filter(s -> !s.contains("Code"))
-                .map(s -> s=s.replace("\"", ""));
+                .filter(s -> !s.contains("YEAR"));
         return distFile;
     }
 }
