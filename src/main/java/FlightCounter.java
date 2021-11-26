@@ -57,8 +57,13 @@ public class FlightCounter implements Serializable {
         );
     }
 
-    public static FlightCounter addValue() {
-        return new FlightCounter();
+    public static FlightCounter addValue(FlightCounter a, boolean isCancelled, boolean isDelayed, float delayTime) {
+        return new FlightCounter(
+                delayTime > a.getMaxDelay() ? delayTime : a.getMaxDelay(),
+                isDelayed ? a.getDelayFlights() + 1 : a.getDelayFlights(),
+                isCancelled ? a.getCancelledFlights() + 1 : a.getCancelledFlights(),
+                a.getFlightCount() + 1
+        );
     }
 
     public static String output(FlightCounter a) {
