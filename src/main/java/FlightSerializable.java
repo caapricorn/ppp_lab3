@@ -41,5 +41,9 @@ public class FlightSerializable implements Serializable {
         return destAirportId;
     }
 
+    public float getDelayTime() {
+        return  delayTime;
+    }
+
     
 }
