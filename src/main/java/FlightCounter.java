@@ -70,7 +70,7 @@ public class FlightCounter implements Serializable {
         float delayedStat = (float)a.delayFlights / (float)a.flightCount * 100;
         float cancelledStat = (float)a.cancelledFlights / (float)a.flightCount * 100;
         String outputString = "Max delay time: " + a.maxDelay + "\n" + "Delayed flights: " +
-                delayedStat + "%\n" + "Cancelled flights: " + ;
+                delayedStat + "%\n" + "Cancelled flights: " +  cancelledStat + "%\n";
         return outputString;
     }
 }
