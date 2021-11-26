@@ -27,4 +27,8 @@ public class FlightCounter implements Serializable {
     public void setCancelledFlights(int cancelledFlights) {
         this.cancelledFlights = cancelledFlights;
     }
+
+    public void setFlightCount(int flightCount) {
+        this.flightCount = flightCount;
+    }
 }
