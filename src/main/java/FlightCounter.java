@@ -47,4 +47,13 @@ public class FlightCounter implements Serializable {
     public int getFlightCount() {
         return flightCount;
     }
+
+    public static FlightCounter add(FlightCounter a, FlightCounter b) {
+        return new FlightCounter(
+                a.getMaxDelay() + b.getMaxDelay(),
+                a.getDelayFlights() + b.getDelayFlights(),
+                a.getCancelledFlights() + b.getCancelledFlights(),
+                a.getFlightCount() 
+        )
+    }
 }
