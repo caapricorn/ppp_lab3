@@ -31,4 +31,8 @@ public class FlightCounter implements Serializable {
     public void setFlightCount(int flightCount) {
         this.flightCount = flightCount;
     }
+
+    public float getMaxDelay() {
+        return maxDelay;
+    }
 }
