@@ -7,5 +7,8 @@ public class FlightSerializable implements Serializable {
     private float delayTime;
     private int isCancelled;
 
+    public FlightSerializable() {
+    }
+
     
 }
