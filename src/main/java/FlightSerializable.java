@@ -32,4 +32,10 @@ public class FlightSerializable implements Serializable {
     public void setIsCancelled(int isCancelled) {
         this.isCancelled = isCancelled;
     }
+
+    public float getOriginAirportId() {
+        return originAirportId;
+    }
+
+    
 }
