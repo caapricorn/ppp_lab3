@@ -16,4 +16,8 @@ public class FlightSerializable implements Serializable {
         this.delayTime = delayTime;
         this.isCancelled = isCancelled;
     }
+
+    public void setOriginAirportId(int originAirportId) {
+        this.originAirportId = originAirportId;
+    }
 }
