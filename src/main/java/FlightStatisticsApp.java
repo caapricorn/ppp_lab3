@@ -86,5 +86,7 @@ public class FlightStatisticsApp {
 
                     return originAirportName + "===>" + destAirportName + "\n" + value;
                 });
+
+        resultOutput.saveAsTextFile();
     }
 }
