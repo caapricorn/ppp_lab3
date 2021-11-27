@@ -74,5 +74,6 @@ public class FlightStatisticsApp {
                 .mapToPair(
                         a -> new Tuple2<>(a._1(), FlightCounter.output(a._2()))
                 );
+        
     }
 }
