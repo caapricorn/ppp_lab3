@@ -1,3 +1,10 @@
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.broadcast.Broadcast;
+import scala.Tuple2;
+
 public class FlightStatisticsApp {
     private static final int ORIGIN_AIRPORT_ID = 11;
     private static final int DEST_AIRPORT_ID = 14;
