@@ -51,7 +51,7 @@ public class FlightStatisticsApp {
                     String[] colums = s.split(",");
                     int originAirportId = Integer.parseInt(colums[ORIGIN_AIRPORT_ID]);
                     int destAirportId = Integer.parseInt(colums[DEST_AIRPORT_ID]);
-                    float
+                    float delayTime = (colums[DELAY_TIME].equals("")) ? 0.0f : Float.parseFloat(colums[DELAY_TIME])
                 })
     }
 }
