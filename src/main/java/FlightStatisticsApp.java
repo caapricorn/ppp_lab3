@@ -51,7 +51,11 @@ public class FlightStatisticsApp {
                     String[] colums = s.split(",");
                     int originAirportId = Integer.parseInt(colums[ORIGIN_AIRPORT_ID]);
                     int destAirportId = Integer.parseInt(colums[DEST_AIRPORT_ID]);
-                    float delayTime = (colums[DELAY_TIME].equals("")) ? 0.0f : Float.parseFloat(colums[DELAY_TIME])
-                })
+                    float delayTime = (colums[DELAY_TIME].equals("")) ? 0.0f : Float.parseFloat(colums[DELAY_TIME]);
+                    return new Tuple2<>(
+                            new Tuple2<>(originAirportId, destAirportId),
+                            new FlightSerializable(originAirportId, destAirportId, delayTime, (int) Float.parseFloat(colums[IS_CANCELLED]))
+                    );
+                });
     }
 }
