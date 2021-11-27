@@ -6,7 +6,7 @@ public class FlightStatisticsApp {
 
     public static void main(String[] args) throws Exception {
         if (args.length != 3) {
-            System.err.println("Usage: ");
+            System.err.println("Usage: <input path Airport> <input path Flight> <output path>");
         }
     }
 }
