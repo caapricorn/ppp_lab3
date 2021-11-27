@@ -69,7 +69,10 @@ public class FlightStatisticsApp {
                                 p.getIsCancelled() == 1.0f,
                                 p.getDelayTime() > 0.0f,
                                 p.getDelayTime()),
-                        
+                        FlightCounter::add
                 )
+                .mapToPair(
+                        a -> new Tuple2<>(a._1(), FlightCounter.output(a._2()))
+                );
     }
 }
