@@ -42,6 +42,10 @@ public class FlightStatisticsApp {
 
         Map<Integer, String> stringAirportDataMap = airportData.collectAsMap();
 
+        final Broadcast<Map<Integer, String>> airportsBroadcasted = sc.broadcast(stringAirportDataMap);
+
         flightFile = CSVParser.parseFlight(flightFile);
+
+        
     }
 }
