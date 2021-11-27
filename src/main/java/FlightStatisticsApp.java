@@ -62,7 +62,14 @@ public class FlightStatisticsApp {
                 .combineByKey(
                         p -> new FlightCounter(p.getDelayTime(),
                                 p.getDelayTime() > 0.0f ? 1 : 0,
-                                )
+                                p.getIsCancelled() == 1.0f ? 1 : 0,
+                                1
+                                ),
+                        (flightCounter, p) -> FlightCounter.addValue(flightCounter,
+                                p.getIsCancelled() == 1.0f,
+                                p.getDelayTime() > 0.0f,
+                                p.getDelayTime()),
+                        
                 )
     }
 }
