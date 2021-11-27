@@ -74,6 +74,17 @@ public class FlightStatisticsApp {
                 .mapToPair(
                         a -> new Tuple2<>(a._1(), FlightCounter.output(a._2()))
                 );
-        
+
+        JavaRDD<String> resultOutput = flightResult
+                .map(a -> {
+                    Map<Integer, String> airportOriginId = airportsBroadcasted.value();
+                    Tuple2<Integer, Integer> key = a._1();
+                    String value = a._2();
+
+                    String originAirportName = airportOriginId.get(key._1());
+                    String destAirportName = airportOriginId.get(key._2());
+
+                    return originAirportName + "===>" + destAirportName + "\n" + value;
+                });
     }
 }
