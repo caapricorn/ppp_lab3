@@ -16,7 +16,6 @@ public class FlightStatisticsApp {
             System.err.println("Usage: <input path Airport> <input path Flight> <output path>");
             System.exit(-1);
         }
-
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContaxt sc = new JavaSparkContaxt(conf);
     }
