@@ -57,5 +57,12 @@ public class FlightStatisticsApp {
                             new FlightSerializable(originAirportId, destAirportId, delayTime, (int) Float.parseFloat(colums[IS_CANCELLED]))
                     );
                 });
+
+        JavaPairRDD<Tuple2<Integer, Integer>, String> flightResult = flightData
+                .combineByKey(
+                        p -> new FlightCounter(p.getDelayTime(),
+                                p.getDelayTime() > 0.0f ? 1 : 0,
+                                )
+                )
     }
 }
