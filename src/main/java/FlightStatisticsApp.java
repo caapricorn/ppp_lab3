@@ -46,6 +46,12 @@ public class FlightStatisticsApp {
 
         flightFile = CSVParser.parseFlight(flightFile);
 
-        
+        JavaPairRDD<Tuple2<Integer, Integer>, FlightSerializable> flightData = flightFile
+                .mapToPair(s -> {
+                    String[] colums = s.split(",");
+                    int originAirportId = Integer.parseInt(colums[ORIGIN_AIRPORT_ID]);
+                    int destAirportId = Integer.parseInt(colums[DEST_AIRPORT_ID]);
+                    float
+                })
     }
 }
