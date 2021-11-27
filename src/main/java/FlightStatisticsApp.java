@@ -87,6 +87,6 @@ public class FlightStatisticsApp {
                     return originAirportName + "===>" + destAirportName + "\n" + value;
                 });
 
-        resultOutput.saveAsTextFile("\houtput");
+        resultOutput.saveAsTextFile("/home/caapricorn/output");
     }
 }
