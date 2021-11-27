@@ -87,6 +87,6 @@ public class FlightStatisticsApp {
                     return originAirportName + "===>" + destAirportName + "\n" + value;
                 });
 
-        resultOutput.saveAsTextFile("hdfs://localhost:9000/user/caapricorn/ppp_lab3/output");
+        resultOutput.saveAsTextFile("output");
     }
 }
