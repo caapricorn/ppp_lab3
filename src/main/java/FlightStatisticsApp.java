@@ -23,8 +23,10 @@ public class FlightStatisticsApp {
         String airportPath = args[1];
         String outputPath = args[2];
 
-        
+        JavaRDD<String> flightFile = sc.textFile(flightPath);
+        JavaRDD<String> airportFile = sc.textFile(airportPath);
 
         airportFile = CSVParser.parseAirport(airportFile);
+        flightFile = CSVParser.parseFlight(flightFile);
     }
 }
