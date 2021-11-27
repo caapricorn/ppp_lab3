@@ -27,6 +27,9 @@ public class FlightStatisticsApp {
         JavaRDD<String> airportFile = sc.textFile(airportPath);
 
         airportFile = CSVParser.parseAirport(airportFile);
+
+        JavaPairRDD<Integer, String> airportData = 
+
         flightFile = CSVParser.parseFlight(flightFile);
     }
 }
