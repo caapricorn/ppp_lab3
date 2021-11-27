@@ -18,5 +18,9 @@ public class FlightStatisticsApp {
         }
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
+
+        String flightPath = args[0];
+        String airportPath = args[1];
+        String outputPath = args[2];
     }
 }
