@@ -17,6 +17,6 @@ public class FlightStatisticsApp {
             System.exit(-1);
         }
         SparkConf conf = new SparkConf().setAppName("lab3");
-        JavaSparkContaxt sc = new JavaSparkContaxt(conf);
+        JavaSparkContext sc = new JavaSparkContext(conf);
     }
 }
