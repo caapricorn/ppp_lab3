@@ -22,5 +22,9 @@ public class FlightStatisticsApp {
         String flightPath = args[0];
         String airportPath = args[1];
         String outputPath = args[2];
+
+        
+
+        airportFile = CSVParser.parseAirport(airportFile);
     }
 }
