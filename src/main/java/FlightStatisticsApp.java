@@ -28,7 +28,15 @@ public class FlightStatisticsApp {
 
         airportFile = CSVParser.parseAirport(airportFile);
 
-        JavaPairRDD<Integer, String> airportData = 
+        JavaPairRDD<Integer, String> airportData =  airportFile
+                .mapToPair(s -> {
+                    int commaIndex = s.indexOf(",");
+                    return new Tuple2<>(
+                            Integer.parseInt(s.substring(0, commaIndex)),
+                            s.substring(commaIndex + 1, s.length())
+                    );
+                }
+                );
 
         flightFile = CSVParser.parseFlight(flightFile);
     }
