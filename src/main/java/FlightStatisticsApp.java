@@ -21,11 +21,11 @@ public class FlightStatisticsApp {
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        String flightPath = args[0];
-        String airportPath = args[1];
-        String outputPath = args[2];
+//        String flightPath = args[0];
+//        String airportPath = args[1];
+//        String outputPath = args[2];
 
-        JavaRDD<String> flightFile = sc.textFile(flightPath);
+        JavaRDD<String> flightFile = sc.textFile("664600583_T_ONTIME_sample.csv");
         JavaRDD<String> airportFile = sc.textFile("L_AIRPORT_ID.csv");
 
         airportFile = CSVParser.parseAirport(airportFile);
