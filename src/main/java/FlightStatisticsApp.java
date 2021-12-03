@@ -14,16 +14,9 @@ public class FlightStatisticsApp {
     private static final int IS_CANCELLED = 19;
 
     public static void main(String[] args) {
-//        if (args.length != 3) {
-//            System.err.println("Usage: <input path Airport> <input path Flight> <output path>");
-//            System.exit(-1);
-//        }
+
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
-
-//        String flightPath = args[0];
-//        String airportPath = args[1];
-//        String outputPath = args[2];
 
         JavaRDD<String> flightFile = sc.textFile("664600583_T_ONTIME_sample.csv");
         JavaRDD<String> airportFile = sc.textFile("L_AIRPORT_ID.csv");
@@ -84,7 +77,7 @@ public class FlightStatisticsApp {
                     String originAirportName = airportOriginId.get(key._1());
                     String destAirportName = airportOriginId.get(key._2());
 
-                    return originAirportName + "===>" + destAirportName + "\n" + value;
+                    return originAirportName + " ===> " + destAirportName + "\n" + value;
                 });
 
         resultOutput.saveAsTextFile("output");
