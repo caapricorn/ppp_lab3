@@ -26,7 +26,7 @@ public class FlightStatisticsApp {
         String outputPath = args[2];
 
         JavaRDD<String> flightFile = sc.textFile(flightPath);
-        JavaRDD<String> airportFile = sc.textFile(airportPath);
+        JavaRDD<String> airportFile = sc.textFile("L_AIRPORT_ID.csv");
 
         airportFile = CSVParser.parseAirport(airportFile);
 
