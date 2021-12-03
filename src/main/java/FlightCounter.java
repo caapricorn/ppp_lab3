@@ -16,22 +16,6 @@ public class FlightCounter implements Serializable {
         this.flightCount = flightCount;
     }
 
-//    public void setMaxDelay(int maxDelay) {
-//        this.maxDelay = maxDelay;
-//    }
-//
-//    public void setDelayFlights(int delayFlights) {
-//        this.delayFlights = delayFlights;
-//    }
-//
-//    public void setCancelledFlights(int cancelledFlights) {
-//        this.cancelledFlights = cancelledFlights;
-//    }
-//
-//    public void setFlightCount(int flightCount) {
-//        this.flightCount = flightCount;
-//    }
-
     public float getMaxDelay() {
         return maxDelay;
     }
